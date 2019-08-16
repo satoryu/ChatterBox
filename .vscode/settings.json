@@ -1,0 +1,5 @@
+{
+    "solargraph.commandPath": "bin/solargraph",
+    "solargraph.logLevel": "info",
+    "solargraph.useBundler": true
+}
