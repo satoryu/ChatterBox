@@ -5,6 +5,7 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
+import './application'
 import Vue from 'vue'
 import App from '../app.vue'
 
@@ -14,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     components: { App },
     render: h => h(App)
   })
-
-  console.log(app)
 })
 
 
