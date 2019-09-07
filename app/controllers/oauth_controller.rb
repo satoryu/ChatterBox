@@ -1,8 +1,14 @@
 class OauthController < ApplicationController
   skip_before_action :require_login, raise: false
 
-  def oauth
+  def create
     login_at(:twitter)
+  end
+
+  def destroy
+    logout
+
+    redirect_to root_path
   end
 
   def callback
