@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_08_003346) do
+ActiveRecord::Schema.define(version: 2019_09_09_071828) do
 
   create_table "access_tokens", force: :cascade do |t|
     t.integer "user_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_09_08_003346) do
     t.string "screen_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_image_url"
     t.index ["screen_name"], name: "index_users_on_screen_name", unique: true
   end
 
