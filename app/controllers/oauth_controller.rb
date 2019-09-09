@@ -30,9 +30,9 @@ class OauthController < ApplicationController
     # NOTE: @access_token is provided by Sorcery.
     #       https://github.com/NoamB/sorcery/issues/143#issuecomment-19602346
     if @user.access_token.blank?
-      @user.create_access_token(token: @access_token.token, secret: @access_token.secret, provider: 'twitter')
+      @user.create_access_token(token: access_token.token, secret: access_token.secret, provider: 'twitter')
     else
-      @user.access_token.update_attributes(token: @access_token.token, secret: @access_token.secret, provider: 'twitter')
+      @user.access_token.update_attributes(token: access_token.token, secret: access_token.secret, provider: 'twitter')
     end
   end
 end
