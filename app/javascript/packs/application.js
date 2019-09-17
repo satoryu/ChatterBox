@@ -15,6 +15,7 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import '../src/application.scss'
+import '@fortawesome/fontawesome-free/js/all'
 import 'jquery'
 import 'bootstrap/dist/js/bootstrap.bundle'
-import 'bootstrap/dist/css/bootstrap'
