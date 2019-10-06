@@ -6,10 +6,13 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import './application'
+import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue'
 import App from '../app.vue'
 
-document.addEventListener('DOMContentLoaded', () => {
+Vue.use(TurbolinksAdapter)
+
+document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '#hello',
     components: { App },
