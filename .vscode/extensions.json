@@ -2,6 +2,7 @@
     "recommendations": [
         "rebornix.ruby",
         "castwide.solargraph",
-        "noku.rails-run-spec-vscode"
+        "noku.rails-run-spec-vscode",
+        "ms-vscode-remote.remote-containers"
     ]
 }

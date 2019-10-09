@@ -49,7 +49,3 @@ RUN gem update --system && \
 RUN mkdir -p /app
 
 WORKDIR /app
-
-COPY ./ /app/
-RUN bundle install
-RUN bundle exec rails yarn:install webpacker:compile

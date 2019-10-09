@@ -5,8 +5,7 @@
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
 	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
 	"dockerComposeFile": [
-		"../docker-compose.yml",
-		"docker-compose.yml"
+		"../docker-compose.yml"
 	],
 
 	// The 'service' property is the name of the service for the container that VS Code should
@@ -36,5 +35,20 @@
 	// "postCreateCommand": "apt-get update && apt-get install -y git",
 
 	// Add the IDs of extensions you want installed when the container is created in the array below.
-	"extensions": []
+	"extensions": [
+        "rebornix.ruby",
+        "castwide.solargraph",
+        "noku.rails-run-spec-vscode",
+		"kaiwood.endwise",
+		"coenraads.bracket-pair-colorizer-2",
+		"formulahendry.code-runner",
+		"editorconfig.editorconfig",
+		"oderwat.indent-rainbow",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"humao.rest-client",
+		"connorshea.vscode-ruby-test-adapter",
+		"pflannery.vscode-versionlens",
+		"sdras.vue-vscode-extensionpack"
+	]
 }
