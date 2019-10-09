@@ -29,7 +29,7 @@
 	// "runServices": [],
 
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
-	"shutdownAction": "stopContainer",
+	"shutdownAction": "stopCompose",
 
 	// Uncomment the next line to run commands after the container is created - for example installing git.
 	// "postCreateCommand": "apt-get update && apt-get install -y git",
