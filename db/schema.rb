@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2019_09_09_071828) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "access_tokens", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "token", null: false
     t.string "secret", null: false
     t.string "provider", null: false
@@ -40,4 +43,5 @@ ActiveRecord::Schema.define(version: 2019_09_09_071828) do
     t.index ["screen_name"], name: "index_users_on_screen_name", unique: true
   end
 
+  add_foreign_key "access_tokens", "users"
 end

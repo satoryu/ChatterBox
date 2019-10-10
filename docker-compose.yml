@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  app: &app
+    build:
+      context: .
+      args:
+          RUBY_VERSION: '2.6.3'
+          PG_MAJOR: '11'
+          NODE_MAJOR: '10'
+          YARN_VERSION: '1.19.0'
+          BUNDLER_VERSION: '2.0.2'
+    image: chatterbox-dev:1.0.0
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432
+      - RAILS_ENV=${RAILS_ENV:-development}
+      - BOOTSNAP_CACHE_DIR=/bundle/bootsnap
+    volumes:
+      - .:/app:cached
+      - rails_cache:/app/tmp/cache
+      - packs:/app/public/packs
+      - bundle:/bundle
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+    tmpfs:
+      - /tmp
+
+  db:
+    image: postgres:11.5
+    volumes:
+      - database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  database:
+  rails_cache:
+  packs:
+  bundle:
